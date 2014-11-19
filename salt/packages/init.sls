@@ -2,6 +2,7 @@ packages:
   pkg.latest:
     - pkgs:
       - build-essential
+      - createrepo
       - curl
       - debootstrap
       - extlinux
@@ -13,14 +14,17 @@ packages:
       - kpartx
       - libmysqlclient-dev
       - libvirt-bin
+      - lrzip
       - make
-      #- nginx
+      - multistrap
       - nodejs
+      - python-daemon
       - python-dev
       - python-ipaddr
       - python-paramiko
       - python-pip
       - python-nose
+      - python-setuptools
       - python-software-properties
       - python-yaml
       - rsync
