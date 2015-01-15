@@ -40,3 +40,14 @@ packages:
       - virtualenvwrapper
       - yum
       - yum-utils
+
+multistrap-forceyes-removal:
+  # Remove $forceyes variable from /usr/sbin/multistrap
+  # See https://bugs.launchpad.net/ubuntu/+source/multistrap/+bug/1313787
+  # for more details
+  file.replace:
+    - name: /usr/sbin/multistrap
+    - pattern: \$forceyes
+    - repl: 
+    - require:
+      - pkg: packages
